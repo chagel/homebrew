@@ -55,6 +55,7 @@ class Macvim < Formula
       --with-tlib=ncurses
       --with-compiledby=Homebrew
       --with-local-dir=#{HOMEBREW_PREFIX}
+      --with-ruby-command=#{`which ruby`.strip}
     ]
 
     args << "--enable-cscope" if build.with? "cscope"
